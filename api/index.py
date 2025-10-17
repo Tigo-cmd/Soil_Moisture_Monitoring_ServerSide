@@ -48,6 +48,6 @@ def stream():
     return Response(event_stream(), mimetype='text/event-stream')
 
 if __name__ == '__main__':
-      port = int(os.getenv("PORT", 8080))
+    port = int(os.getenv("PORT", 8080))
     # Run: python app.py  (or use flask run -h 0.0.0.0 -p 5000)
     app.run(host='0.0.0.0', port=port, threaded=True)
