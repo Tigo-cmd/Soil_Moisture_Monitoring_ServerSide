@@ -30,6 +30,10 @@ def ingest():
 @app.route('/latest', methods=['GET'])
 def get_latest():
     return jsonify(latest)
+    
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"status":"ok"}), 200
 
 @app.route('/stream')
 def stream():
